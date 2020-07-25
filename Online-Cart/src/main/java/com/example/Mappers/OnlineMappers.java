@@ -18,6 +18,7 @@ public class OnlineMappers extends OnlineBaseMapper<UserRegistrationVO, UserRegi
 	@Override
 	public UserRegistrationVO convertDTO(UserRegistrationDTO dto) {
 		UserRegistrationVO vo = new UserRegistrationVO();
+		vo.setUserId(dto.getUserId());
 		vo.setName(dto.getName());
 		vo.setFatherName(dto.getFatherName());
 		vo.setAge(dto.getAge());
@@ -39,6 +40,7 @@ public class OnlineMappers extends OnlineBaseMapper<UserRegistrationVO, UserRegi
 	@Override
 	public UserRegistrationDTO convertVO(UserRegistrationVO vo) {
 		UserRegistrationDTO dto = new UserRegistrationDTO();
+		funPoint(vo.getUserId(), dto::setUserId);
 		funPoint(vo.getName(), dto::setName);
 		funPoint(vo.getFatherName(), dto::setFatherName);
 		funPoint(vo.getUserName(), dto::setUserName);

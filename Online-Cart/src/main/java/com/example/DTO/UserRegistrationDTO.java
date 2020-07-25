@@ -1,9 +1,13 @@
 package com.example.DTO;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.example.Utils.BaseDTO;
-
+@Document(collection = "User_Details")
 public class UserRegistrationDTO extends BaseDTO {
-
+	@Id
+	private String userId;
 	private String name;
 	private String fatherName;
 	private String userName;
@@ -12,6 +16,14 @@ public class UserRegistrationDTO extends BaseDTO {
 	private String gender;
 	private AddressDTO addressDTO;
 	private CommunicationDTO communicationDTO;
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
 	public String getName() {
 		return name;

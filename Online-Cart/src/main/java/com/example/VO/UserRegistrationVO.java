@@ -1,7 +1,7 @@
 package com.example.VO;
 
 public class UserRegistrationVO  {
-
+	private String userId;
 	private String name;
 	private String fatherName;
 	private String userName;
@@ -10,6 +10,14 @@ public class UserRegistrationVO  {
 	private String gender;
 	private AddressVO addressVO;
 	private CommunicationVO communicationVO;
+	
+	
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	public String getName() {
 		return name;
 	}
