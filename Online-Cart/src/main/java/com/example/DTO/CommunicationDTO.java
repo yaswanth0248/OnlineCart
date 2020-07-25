@@ -1,11 +1,9 @@
 package com.example.DTO;
 
-import com.example.Utils.Phone;
-
 public class CommunicationDTO {
 	private String email;
-	private Phone phoneno;
-
+	private String phoneNo;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -14,12 +12,13 @@ public class CommunicationDTO {
 		this.email = email;
 	}
 
-	public Phone getPhoneno() {
-		return phoneno;
+	public String getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhoneno(Phone phoneno) {
-		this.phoneno = phoneno;
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
+
 
 }

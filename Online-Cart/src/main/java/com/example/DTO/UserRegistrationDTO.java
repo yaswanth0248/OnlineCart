@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.example.Utils.BaseDTO;
-@Document(collection = "User_Details")
+@Document(collection = "User_Detail")
 public class UserRegistrationDTO extends BaseDTO {
 	@Id
 	private String userId;

@@ -12,7 +12,7 @@ public class OnlineCommuMapper extends OnlineBaseMapper<CommunicationVO, Communi
 	public CommunicationVO convertDTO(CommunicationDTO dto) {
 		CommunicationVO vo = new CommunicationVO();
 		funPoint(dto.getEmail(), vo::setEmail);
-		funPoint(dto.getPhoneno(), vo::setPhoneno);
+		funPoint(dto.getPhoneNo(),vo::setPhoneNo);
 		
 		return vo;
 	}
@@ -21,7 +21,7 @@ public class OnlineCommuMapper extends OnlineBaseMapper<CommunicationVO, Communi
 	public CommunicationDTO convertVO(CommunicationVO vo) {
 		CommunicationDTO dto = new CommunicationDTO();
 		dto.setEmail(vo.getEmail());
-		dto.setPhoneno(vo.getPhoneno());
+		dto.setPhoneNo(vo.getPhoneNo());
 		
 		return dto;
 	}

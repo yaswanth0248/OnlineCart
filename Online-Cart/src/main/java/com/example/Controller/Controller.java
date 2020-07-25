@@ -2,6 +2,7 @@ package com.example.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,10 +24,10 @@ public class Controller {
 		return "Hai ......";
 	}
 
-	@PostMapping(value ="/saveUserDetails")
+	@PostMapping(value ="/saveUserDetails", consumes = {MediaType.APPLICATION_JSON_VALUE})
 	public OnlineResponse<?> SavingTheData(@RequestBody UserRegistrationVO userRegistrationVO) {
 		try {
-			if(StringUtils.isEmpty(userRegistrationVO)) {
+			if(!StringUtils.isEmpty(userRegistrationVO)) {
 				userRegistrationService.SaveUserDetails(userRegistrationVO);
 				return new OnlineResponse<>(true, HttpStatus.ACCEPTED, "Successfully Saved");
 			}
@@ -37,7 +38,7 @@ public class Controller {
 			
 			return new OnlineResponse<>(HttpStatus.BAD_REQUEST, o.getMessage());
 		}catch(NullPointerException n) {
-			return new OnlineResponse<>(HttpStatus.NOT_ACCEPTABLE, n.getMessage());
+			return new OnlineResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, n.getMessage());
 		}catch(Exception e) {
 			return new OnlineResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
 		}

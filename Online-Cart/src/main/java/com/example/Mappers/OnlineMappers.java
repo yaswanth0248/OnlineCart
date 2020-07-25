@@ -48,7 +48,7 @@ public class OnlineMappers extends OnlineBaseMapper<UserRegistrationVO, UserRegi
 		funPoint(vo.getPassword(), dto::setPassword);
 		funPoint(vo.getGender(), dto::setGender);
 		if(vo.getAddressVO()!=null) {
-			onlineAddressMapper.convertVO(vo.getAddressVO());
+			funPoint(onlineAddressMapper.convertVO(vo.getAddressVO()), dto::setAddressDTO);
 		}
 		if(vo.getCommunicationVO()!=null) {
 			funPoint(onlineCommuMapper.convertVO(vo.getCommunicationVO()), dto::setCommunicationDTO);

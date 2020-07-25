@@ -1,10 +1,8 @@
 package com.example.VO;
 
-import com.example.Utils.Phone;
-
 public class CommunicationVO {
 	private String email;
-	private Phone phoneno;
+	private String phoneNo;
 
 	public String getEmail() {
 		return email;
@@ -14,12 +12,13 @@ public class CommunicationVO {
 		this.email = email;
 	}
 
-	public Phone getPhoneno() {
-		return phoneno;
+	public String getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhoneno(Phone phoneno) {
-		this.phoneno = phoneno;
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
+
 
 }

@@ -1,12 +1,13 @@
 package com.example.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import com.example.DAO.UserRegistrationDAO;
 import com.example.DTO.UserRegistrationDTO;
 import com.example.Mappers.OnlineMappers;
 import com.example.VO.UserRegistrationVO;
 
-
+@Service
 public class UserRegistrationServiceImpl implements UserRegistrationService {
 
 	@Autowired
