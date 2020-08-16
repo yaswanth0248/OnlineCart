@@ -7,16 +7,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class BaseDTO {
 
 	private String bloodGroup;
-
-	private String education;
-
 	private String aadharNo;
-
 	private String createdBy;
-
+	private String modifiedBy;	
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss.SSS")
+	private LocalDateTime modifiedDate;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
 	private LocalDateTime createdDate;
-
 	private String ipAddress;
 
 	public String getBloodGroup() {
@@ -25,14 +22,6 @@ public class BaseDTO {
 
 	public void setBloodGroup(String bloodGroup) {
 		this.bloodGroup = bloodGroup;
-	}
-
-	public String getEducation() {
-		return education;
-	}
-
-	public void setEducation(String education) {
-		this.education = education;
 	}
 
 	public String getAadharNo() {
@@ -51,6 +40,22 @@ public class BaseDTO {
 		this.createdBy = createdBy;
 	}
 
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+
+	public LocalDateTime getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(LocalDateTime modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
 	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
@@ -66,5 +71,14 @@ public class BaseDTO {
 	public void setIpAddress(String ipAddress) {
 		this.ipAddress = ipAddress;
 	}
+
+	@Override
+	public String toString() {
+		return "BaseDTO [bloodGroup=" + bloodGroup + ", aadharNo=" + aadharNo + ", createdBy=" + createdBy
+				+ ", modifiedBy=" + modifiedBy + ", modifiedDate=" + modifiedDate + ", createdDate=" + createdDate
+				+ ", ipAddress=" + ipAddress + "]";
+	}
+
+
 
 }
