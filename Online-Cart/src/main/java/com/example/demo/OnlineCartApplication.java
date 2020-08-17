@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @SpringBootApplication(exclude = { MongoAutoConfiguration.class,
 		MongoDataAutoConfiguration.class }, scanBasePackages = { "com.example.*" })
-@EnableMongoRepositories(basePackages = "com.example.DAO")
+@EnableMongoRepositories(basePackages = "com.example.*")
 //@ComponentScan(basePackages = {"com.example.*"})
 @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class })
 public class OnlineCartApplication {

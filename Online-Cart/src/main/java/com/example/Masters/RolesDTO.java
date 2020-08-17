@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Master_Roles")
-public class Roles {
+public class RolesDTO {
 
 	@Id
 	private String roleId;

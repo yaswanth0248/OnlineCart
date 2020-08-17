@@ -5,7 +5,6 @@ public class UserRegistrationVO  {
 	private String name;
 	private String fatherName;
 	private String userName;
-	private String education;
 	private char[] password;
 	private int age;
 	private String gender;
