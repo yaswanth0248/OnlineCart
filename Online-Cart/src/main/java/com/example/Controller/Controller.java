@@ -41,7 +41,7 @@ public class Controller {
 		} catch (OnlineBadRequestException o) {
 			return new OnlineResponse<>(HttpStatus.BAD_REQUEST, o.getMessage());
 		} catch (NullPointerException n) {
-			return new OnlineResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, n.getMessage());
+			return new OnlineResponse<>(HttpStatus.NO_CONTENT, n.getMessage());
 		} catch (Exception e) {
 			return new OnlineResponse<>(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
 		}

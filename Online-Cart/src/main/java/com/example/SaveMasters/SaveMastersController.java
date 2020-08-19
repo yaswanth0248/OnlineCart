@@ -28,7 +28,7 @@ public class SaveMastersController {
 		} catch (NullPointerException ne) {
 			return new OnlineResponse<>(false, HttpStatus.INTERNAL_SERVER_ERROR, ne.getMessage());
 		} catch (Exception e) {
-			return new OnlineResponse<>(false, HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
+			return new OnlineResponse<>(false, HttpStatus.BAD_REQUEST, e.getMessage());
 		}
 	}
 
@@ -41,7 +41,7 @@ public class SaveMastersController {
 		} catch (NullPointerException ne) {
 			return new OnlineResponse<>(false, HttpStatus.INTERNAL_SERVER_ERROR, ne.getMessage());
 		} catch (Exception e) {
-			return new OnlineResponse<>(false, HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
+			return new OnlineResponse<>(false, HttpStatus.BAD_REQUEST, e.getMessage());
 		}
 	}
 }
