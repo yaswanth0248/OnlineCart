@@ -21,10 +21,10 @@ public class SaveMastersServiceImpl implements SaveMastersService {
 	@Override
 	public String SaveDistrictMasters(String StateId, int endPoint, String StateName) {
 		// To Save Master District Data
-		LocalDateTime a = LocalDateTime.of(1956, Month.NOVEMBER, 1, 00, 10, 30);
+		LocalDateTime a = LocalDateTime.of(1951, Month.NOVEMBER, 17, 00, 10, 30);
 		DistrictDTO dto = new DistrictDTO();
 		for (int i = 1; i <= endPoint; i++) {
-			dto.setDistrictId("AP0");
+			dto.setDistrictId("AS0");
 			dto.setDistrictName("");
 			dto.setStateName(StateName);
 			dto.setStateId(StateId);
@@ -32,6 +32,7 @@ public class SaveMastersServiceImpl implements SaveMastersService {
 			dto.setCreatedBy("YASWANTH");
 			dto.setStatus("Y");
 			dto.setIsEnable(true);
+			districtDAO.save(dto);
 		}
 		
 		return "Success";
