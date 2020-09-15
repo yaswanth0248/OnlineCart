@@ -19,8 +19,8 @@ import com.example.VO.UserRegistrationVO;
 
 @RestController
 @CrossOrigin
-@RequestMapping(MappingUrls.online_cart_url)
-public class Controller {
+@RequestMapping(MappingUrls.SignUp_cart_url)
+public class SignUpController {
 	@Autowired
 	private UserRegistrationService userRegistrationService;
 
@@ -47,5 +47,4 @@ public class Controller {
 		}
 
 	}
-
 }

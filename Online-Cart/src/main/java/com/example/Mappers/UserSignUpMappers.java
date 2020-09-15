@@ -7,7 +7,7 @@ import com.example.DTO.UserRegistrationDTO;
 import com.example.Utils.OnlineBaseMapper;
 import com.example.VO.UserRegistrationVO;
 @Component
-public class OnlineMappers extends OnlineBaseMapper<UserRegistrationVO, UserRegistrationDTO>{
+public class UserSignUpMappers extends OnlineBaseMapper<UserRegistrationVO, UserRegistrationDTO>{
 
 	@Autowired
 	private OnlineAddressMapper onlineAddressMapper;

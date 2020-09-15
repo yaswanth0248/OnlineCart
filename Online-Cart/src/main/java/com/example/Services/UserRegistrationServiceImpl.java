@@ -2,23 +2,24 @@ package com.example.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.example.DAO.UserRegistrationDAO;
 import com.example.DTO.UserRegistrationDTO;
-import com.example.Mappers.OnlineMappers;
+import com.example.Mappers.UserSignUpMappers;
 import com.example.VO.UserRegistrationVO;
 
 @Service
 public class UserRegistrationServiceImpl implements UserRegistrationService {
 
 	@Autowired
-	private OnlineMappers onlineMappers;
+	private UserSignUpMappers userSignUpMappers;
 	@Autowired
 	private UserRegistrationDAO userRegistrationDAO;
 
 	@Override
 	public String SaveUserDetails(UserRegistrationVO userRegistrationVO) {
 		UserRegistrationDTO dto = null;
-		dto = onlineMappers.convertVO(userRegistrationVO);		
+		dto = userSignUpMappers.convertVO(userRegistrationVO);		
 		userRegistrationDAO.save(dto);
 		return "Success";
 	}

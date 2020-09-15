@@ -21,7 +21,7 @@ import com.example.Utils.OnlineResponse;
 @RestController
 @CrossOrigin
 @RequestMapping(MappingUrls.masters_data_url)
-public class MasterController {
+public class MastersController {
 	@Autowired
 	private MasterServices masterServices;
 
